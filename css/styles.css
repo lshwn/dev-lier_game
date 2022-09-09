@@ -1,0 +1,13 @@
+@import "index.css";
+@import "reset.css";
+@import "first_page.css";
+@import "play_ready.css";
+
+
+body {
+    background-color: lightblue;
+}
+
+a {
+    text-decoration:none;
+}

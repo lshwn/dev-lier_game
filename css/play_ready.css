@@ -1,0 +1,22 @@
+.play_ready_subject{
+    display: flex;
+    background-color: yellowgreen;
+    font-size: 25px;
+    padding:10px;
+    margin-bottom:30px;
+}
+
+#play_ready_game_info{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px;
+    font-size: 20px;
+}
+
+label {
+    margin:10px;
+}
+
+.play_ready_butn{
+    display: flex;
+}
