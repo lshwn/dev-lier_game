@@ -3,11 +3,14 @@
 @import "first_page.css";
 @import "play_ready.css";
 
-
 body {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 a {
-    text-decoration:none;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }

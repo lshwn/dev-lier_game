@@ -8,31 +8,38 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="main">
+    <div class="main main1">
       <h1 class="index_title">게임 준비</h1>
       <div class="play_ready_subject">
-        <h2>이번 게임 주제는</h2>
-        <h2 class="paly_ready_subject_text">*****</h2>
-        <h2>입니다.</h2>
+        <h2>이번 게임의 주제는&nbsp</h2>
+        <h2 class="play_ready_subject_text"></h2>
+        <h2>&nbsp입니다.</h2>
       </div>
-      <div>
-        <form id="play_ready_game_info">
-          <div>
-            <label for="play_ready_num">사람 수:</label>
-            <input type="number" min="2" id="play_ready_num" />
-            <label for="play_ready_num_lier">라이어 수:</label>
-            <input type="number" min="1" id="play_ready_num_lier" />
-          </div>
-        </form>
-      </div>
-      <div>
+
+      <form id="play_ready_game_info">
+        <div>
+          <label for="play_ready_num">게임에 참여하는 사람 수:</label>
+          <input id="play_ready_num" type="number" />
+          <span>명</span>
+        </div>
+
         <div class="play_ready_butn">
           <a href="first_page.html"><div class="index_start">🔙</div></a>
-          <a href="first_page.html"
-            ><div class="index_start">게임시작😁</div></a
-          >
+          <button id="game_start_btn" class="index_start">게임시작👻</button>
         </div>
+      </form>
+    </div>
+
+    <div id="main2" class="hidden">
+      <div class="main2_title">
+        <span></span>
+        <span
+          >라이어는 1명입니다. 지금부터 돌아가면서 제시어를 확인하도록
+          하겠습니다.</span
+        >
+        <div id="check_element" class="index_start">제시어 확인하기</div>
       </div>
     </div>
+    <script src="js/play_ready.js"></script>
   </body>
 </html>
