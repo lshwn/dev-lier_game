@@ -184,12 +184,9 @@ function setUp() {
   return setUpLine;
 }
 
-function minusNumber() {
-  let minusNumber = 4;
-  for (i = 0; i < 4; i++) {
-    minusNumber = minusNumber - 1;
-    setTimeout(() => (counter.innerText = minusNumber), 1000);
-  }
+function sleep(ms) {
+  const wakeUpTime = Date.now() + ms;
+  while (Date.now() < wakeUpTime) {}
 }
 
 let countClick = 0;
@@ -205,7 +202,6 @@ function eleOpen() {
     findLierBtn.classList.toggle("hidden");
   } else {
     elementOpen.innerText = JSON.stringify(test[countClick]);
-    minusNumber();
   }
   countClick = countClick + 1;
 }
