@@ -11,6 +11,8 @@ const elementOpenText = document.querySelector(
 );
 const findLierBtn = document.querySelector("#findLier");
 const counter = document.querySelector("#counter");
+const hideKeyWord = document.querySelector("#check_element_content-hidden");
+const checkLier = document.querySelector("#findLier");
 let test = [];
 
 const subjectList = [
@@ -184,18 +186,21 @@ function setUp() {
   return setUpLine;
 }
 
-function minusNumber() {
-  let minusNumber = 4;
-  for (i = 0; i < 4; i++) {
-    minusNumber = minusNumber - 1;
-    setTimeout(() => (counter.innerText = minusNumber), 1000);
-  }
+function openKeyWord() {
+  hideKeyWord.classList.toggle("hidden");
+  elementOpen.innerText = `${JSON.stringify(test[countClick])}`;
+}
+
+function closeKeyWord() {
+  hideKeyWord.classList.toggle("hidden");
+  elementOpen.innerText = "";
 }
 
 let countClick = 0;
 function eleOpen() {
-  checkBtn.innerText = `제시어 확인하기${countClick + 1}`;
+  checkBtn.innerText = `제시어 확인하기 ${countClick + 1}번째`;
   if (test[countClick] === "null") {
+    checkBtn.innerText = `제시어 확인완료`;
     alert("제시어 확인이 모두 끝났습니다.");
     checkBtn.classList.add("hidden");
     elementOpen.classList.add("hidden");
@@ -204,12 +209,12 @@ function eleOpen() {
       "지금부터 돌아가면서 제시어에 대해 이야기를 합니다. 이야기를 모두 마치고 라이어 확인하기 버튼을 클릭하세요";
     findLierBtn.classList.toggle("hidden");
   } else {
-    elementOpen.innerText = JSON.stringify(test[countClick]);
-    minusNumber();
+    openKeyWord();
   }
   countClick = countClick + 1;
 }
 
 startBtn.addEventListener("click", checkNum);
-
 checkBtn.addEventListener("click", eleOpen);
+hideKeyWord.addEventListener("click", closeKeyWord);
+checkLier.addEventListener("click");
